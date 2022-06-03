@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cdGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/ivGame"
+            android:layout_marginStart="8dp"
+            tools:src="@tools:sample/avatars"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/tvGame"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Name of the Game"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
