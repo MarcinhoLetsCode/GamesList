@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GamesList">
         <activity
+            android:name=".GamesAdapter"
+            android:exported="false" />
+        <activity
             android:name=".GamesDetail"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
