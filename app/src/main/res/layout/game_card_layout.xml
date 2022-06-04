@@ -23,15 +23,16 @@
             android:layout_marginLeft="8dp" />
 
         <TextView
-            android:id="@+id/tvGame"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/tvGame"
             android:textSize="20sp"
             android:textAlignment="center"
             android:text="Name of the Game"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp" />
+            android:layout_marginLeft="8dp" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

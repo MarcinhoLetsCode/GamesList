@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ListView
         android:id="@+id/lvGame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/games_card_layout" />
+        tools:listitem="@layout/game_card_layout"
+        android:layout_height="match_parent" />
+
+
+    <include layout="@layout/game_card_layout" />
 
 </LinearLayout>
