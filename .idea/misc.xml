@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1445" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1445" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_add.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_card_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/games_adapter_layout.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/games_add.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/games_card_layout.xml" value="0.25" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/main_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1445" />
       </map>
     </option>
   </component>

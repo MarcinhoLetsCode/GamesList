@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivRecebeFoto"
+        app:layout_constraintBottom_toTopOf="@id/tvRecebeNome"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/tvRecebeNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Name of the Game"
+        app:layout_constraintBottom_toTopOf="@+id/tvYear"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/ivRecebeFoto" />
+
+    <EditText
+        android:id="@+id/tvYear"
+        app:layout_constraintBottom_toTopOf="@id/tvStudio"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="Year"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvRecebeNome" />
+
+    <EditText
+        android:id="@+id/tvStudio"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="Studio"
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvYear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,21 +8,27 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
-    int[] listaFoto = {R.drawable.dkctwo, R.drawable.smw, R.drawable.tg};
-    String[] listaNome = {"Donkey Kong Country 2", "Super Mario World", "Top Gear"};
-    ListView listGame;
+    GamesContent lista = new GamesContent();
+//    int[] listaFoto = {R.drawable.dkctwo, R.drawable.smw, R.drawable.tg};
+//    String[] listaNome = {"Donkey Kong Country 2", "Super Mario World", "Top Gear"};
+//    String[] year = {"1995", "1990", "1992"};
+//    String[] studio = {"Rare", "Nintendo", " Kemco"};
+   ListView listGame;
+   FloatingActionButton add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
+        add = findViewById(R.id.fabAdd);
         listGame = findViewById(R.id.lvGame);
         //GamesAdapter adapter = new GamesAdapter();
-        GamesAdapter adapter = new GamesAdapter(getApplicationContext(), listaNome, listaFoto);
+        GamesAdapter adapter = new GamesAdapter(getApplicationContext(), lista.listaNome, lista.listaFoto);
         listGame.setAdapter(adapter);
 
         listGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -31,15 +37,34 @@ public class MainActivity extends AppCompatActivity {
 
                 //Intent intent = new Intent(getApplicationContext(), GamesDetail.class);
                 Intent intent = new Intent(MainActivity.this, GamesDetail.class);
-                MainActivity.this.startActivity(intent);
 
                 intent.putExtra("foto_jogo", adapter.listaFoto[position]);
+                //intent.putExtra("foto_jogo", lista.listaFoto[position]);
+                //intent.putExtra("foto_jogo", listaFoto[position]);
+                //intent.putExtra("foto_jogo", adapter.listaFoto[position]);
                 intent.putExtra("nome_jogo", adapter.listaNome[position]);
+                intent.putExtra("ano_jogo", lista.year[position]);
+                intent.putExtra("studio_jogo", lista.studio[position]);
 
-                startActivity(intent);
+//              startActivity(new Intent(this, MainActivity.class));
+                MainActivity.this.startActivity(intent);
+                //startActivity(intent);
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (getApplicationContext(), GamesAdd.class));
             }
         });
     }
+
+//    @Override
+//    public void onBackPressed() {
+////        startActivity(new Intent(this, MainActivity.class));
+//        finish();
+//    }
 
 //    class GamesAdapter extends BaseAdapter {
 //

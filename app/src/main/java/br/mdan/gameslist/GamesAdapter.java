@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class GamesAdapter extends BaseAdapter {
 
+    GamesContent lista = new GamesContent();
+
     Context applicationContext;
     String[] listaNome;
     int[] listaFoto;
@@ -42,10 +44,15 @@ public class GamesAdapter extends BaseAdapter {
 
         //convertView = LayoutInflater.from(applicationContext).inflate(R.layout.game_card_layout, null);
         convertView = inflater.inflate(R.layout.game_card_layout, null);
-        ImageView imageGame = (ImageView) convertView.findViewById(R.id.ivGame);
-        TextView textGame = (TextView) convertView.findViewById(R.id.tvGame);
-        imageGame.setImageResource(listaFoto[position]);
-        textGame.setText(listaNome[position]);
+
+        //ImageView imageGame = (ImageView) convertView.findViewById(R.id.ivGame);
+        ImageView imageGame = convertView.findViewById(R.id.ivGame);
+        //TextView textGame = (TextView) convertView.findViewById(R.id.tvGame);
+        TextView textGame = convertView.findViewById(R.id.tvGame);
+
+        imageGame.setImageResource(lista.listaFoto[position]);
+        //imageGame.setImageResource(lista.listaFoto[position]);
+        textGame.setText(lista.listaNome[position]);
         return convertView;
 
     }
