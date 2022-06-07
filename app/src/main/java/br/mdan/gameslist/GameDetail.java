@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-public class GamesDetail extends AppCompatActivity {
+public class GameDetail extends AppCompatActivity {
 
     ImageView recebeFoto;
     TextView recebeNome;

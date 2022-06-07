@@ -12,23 +12,24 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    GamesContent lista = new GamesContent();
+    GameContent lista = new GameContent();
 //    int[] listaFoto = {R.drawable.dkctwo, R.drawable.smw, R.drawable.tg};
 //    String[] listaNome = {"Donkey Kong Country 2", "Super Mario World", "Top Gear"};
 //    String[] year = {"1995", "1990", "1992"};
 //    String[] studio = {"Rare", "Nintendo", " Kemco"};
-   ListView listGame;
-   FloatingActionButton add;
+    ListView listGame;
+    FloatingActionButton add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        add = findViewById(R.id.fabAdd);
         listGame = findViewById(R.id.lvGame);
+        add = findViewById(R.id.fabAdd);
+
         //GamesAdapter adapter = new GamesAdapter();
-        GamesAdapter adapter = new GamesAdapter(getApplicationContext(), lista.listaNome, lista.listaFoto);
+        GameAdapter adapter = new GameAdapter(getApplicationContext(), lista.listaNome, lista.listaFoto);
         listGame.setAdapter(adapter);
 
         listGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //Intent intent = new Intent(getApplicationContext(), GamesDetail.class);
-                Intent intent = new Intent(MainActivity.this, GamesDetail.class);
+                Intent intent = new Intent(MainActivity.this, GameDetail.class);
 
                 intent.putExtra("foto_jogo", adapter.listaFoto[position]);
                 //intent.putExtra("foto_jogo", lista.listaFoto[position]);
@@ -55,9 +56,10 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent (getApplicationContext(), GamesAdd.class));
+                startActivity(new Intent (getApplicationContext(), GameAdd.class));
             }
         });
+
     }
 
 //    @Override

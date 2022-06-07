@@ -8,9 +8,10 @@
     <ImageView
         android:id="@+id/ivRecebeFoto"
         app:layout_constraintBottom_toTopOf="@id/tvRecebeNome"
-        android:layout_width="200dp"
+        android:scaleType="fitXY"
+        android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -8,20 +8,23 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GamesAdapter extends BaseAdapter {
+public class GameAdapter extends BaseAdapter {
 
-    GamesContent lista = new GamesContent();
+    GameContent lista = new GameContent();
 
     Context applicationContext;
     String[] listaNome;
     int[] listaFoto;
     LayoutInflater inflater;
 
-    public GamesAdapter(Context applicationContext, String[] listaNome, int[] listaFoto) {
+    public GameAdapter(Context applicationContext, String[] listaNome, int[] listaFoto) {
         this.applicationContext = applicationContext;
         this.listaNome = listaNome;
         this.listaFoto = listaFoto;
         inflater = (LayoutInflater.from(applicationContext));
+        //LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //LayoutInflater inflater = getLayoutInflater();
+        //LayoutInflater inflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -51,7 +54,7 @@ public class GamesAdapter extends BaseAdapter {
         TextView textGame = convertView.findViewById(R.id.tvGame);
 
         imageGame.setImageResource(lista.listaFoto[position]);
-        //imageGame.setImageResource(lista.listaFoto[position]);
+        //imageGame.setImageResource(listaFoto[position]);
         textGame.setText(lista.listaNome[position]);
         return convertView;
 

@@ -4,8 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlGame"
+        app:tabMode="fixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiSnes"
+            android:text="Super Nintendo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Game Boy Advanced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Playstation One"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+        <ListView
+            android:id="@+id/lvGame"
+            android:layout_marginTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
@@ -13,19 +42,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <ListView
-            android:id="@+id/lvGame"
-            android:layout_width="match_parent"
-            tools:listitem="@layout/game_card_layout"
-            android:layout_height="match_parent" />
-        <include layout="@layout/game_card_layout" />
-
-    </LinearLayout>
+        android:backgroundTint="#FF0000"
+        style="@style/fab_material"
+        android:layout_marginBottom="10dp"
+        android:tint="#FF0000"
+        app:backgroundTint="#FF0000"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Game" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
