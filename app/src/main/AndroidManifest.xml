@@ -16,6 +16,7 @@
             android:name=".GameDetail"
             android:exported="true"/>
         <activity
+            android:theme="@style/NoBar"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

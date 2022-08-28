@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">List of Games</string>
+    <string name="navopen">navigation_drawer_open</string>
+    <string name="navclose">navigation_drawer_close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

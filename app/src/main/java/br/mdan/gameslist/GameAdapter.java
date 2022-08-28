@@ -8,9 +8,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class GameAdapter extends BaseAdapter {
 
     GameContent lista = new GameContent();
+    TabLayout tabLayout;
 
     Context applicationContext;
     String[] listaNome;
@@ -22,9 +25,6 @@ public class GameAdapter extends BaseAdapter {
         this.listaNome = listaNome;
         this.listaFoto = listaFoto;
         inflater = (LayoutInflater.from(applicationContext));
-        //LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //LayoutInflater inflater = getLayoutInflater();
-        //LayoutInflater inflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -45,17 +45,14 @@ public class GameAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        //convertView = LayoutInflater.from(applicationContext).inflate(R.layout.game_card_layout, null);
         convertView = inflater.inflate(R.layout.game_card_layout, null);
 
-        //ImageView imageGame = (ImageView) convertView.findViewById(R.id.ivGame);
         ImageView imageGame = convertView.findViewById(R.id.ivGame);
-        //TextView textGame = (TextView) convertView.findViewById(R.id.tvGame);
         TextView textGame = convertView.findViewById(R.id.tvGame);
 
-        imageGame.setImageResource(lista.listaFoto[position]);
-        //imageGame.setImageResource(listaFoto[position]);
-        textGame.setText(lista.listaNome[position]);
+        imageGame.setImageResource(listaFoto[position]);
+        textGame.setText(listaNome[position]);
+
         return convertView;
 
     }

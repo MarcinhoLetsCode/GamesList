@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:title="Profile">
+            <menu >
+                <item
+                    android:title="Name"/>
+                <item
+                    android:title="Chat"/>
+                <item
+                    android:title="Theme"/>
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item android:title="Settings">
+            <menu >
+                <item
+                    android:title="Security"/>
+                <item
+                    android:title="Privacy"/>
+            </menu>
+        </item>
+    </group>
+    <item
+        android:title="LogOut"/>
+</menu>

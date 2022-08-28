@@ -17,7 +17,6 @@ public class GameDetail extends AppCompatActivity {
     TextView recebeNome;
     TextView ano;
     TextView estudio;
-    //int[] year = {0, 1, 2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,6 @@ public class GameDetail extends AppCompatActivity {
         ano.setText(lancamento);
         estudio.setText(desenvolvedora);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
@@ -56,18 +54,7 @@ public class GameDetail extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
-        //finish();
-        //Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        //startActivity(intent);
         super.onBackPressed();
     }
-
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        startActivity(new Intent(this, MainActivity.class));
-//        finish();
-//        return true;
-//    }
 
 }

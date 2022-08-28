@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/drawable/ic_baseline_add.xml" value="0.1445" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1445" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/fragment_snes.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_add.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_card_layout.xml" value="0.25" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/game_detail.xml" value="0.20416666666666666" />
@@ -15,6 +16,21 @@
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/games_card_layout.xml" value="0.25" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/layout/main_layout.xml" value="0.22" />
         <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1445" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/drawer.xml" value="0.203125" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/fragment_game.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/fragment_gba.xml" value="0.18" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/fragment_pso.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/fragment_snes.xml" value="0.13796296296296295" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/game_add.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/game_card_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/game_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/main_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/navdrawer.xml" value="0.203125" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/layout/toolbar.xml" value="0.25" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Marcio Darlan/AndroidStudioProjects/GamesList2.0/app/src/main/res/menu/menu_profile.xml" value="0.22" />
       </map>
     </option>
   </component>

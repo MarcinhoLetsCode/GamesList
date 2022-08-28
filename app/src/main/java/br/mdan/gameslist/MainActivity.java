@@ -1,106 +1,74 @@
 package br.mdan.gameslist;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    GameContent lista = new GameContent();
-//    int[] listaFoto = {R.drawable.dkctwo, R.drawable.smw, R.drawable.tg};
-//    String[] listaNome = {"Donkey Kong Country 2", "Super Mario World", "Top Gear"};
-//    String[] year = {"1995", "1990", "1992"};
-//    String[] studio = {"Rare", "Nintendo", " Kemco"};
-    ListView listGame;
-    FloatingActionButton add;
+    TabLayout tabLayout;
+    ViewPager2 viewPager;
+    MaterialToolbar toolbar;
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        listGame = findViewById(R.id.lvGame);
-        add = findViewById(R.id.fabAdd);
+        tabLayout = findViewById(R.id.tlGame);
+        viewPager = findViewById(R.id.vpGames);
+        toolbar = findViewById(R.id.toolBar);
+        drawerLayout = findViewById(R.id.drawerLayout);
 
-        //GamesAdapter adapter = new GamesAdapter();
-        GameAdapter adapter = new GameAdapter(getApplicationContext(), lista.listaNome, lista.listaFoto);
-        listGame.setAdapter(adapter);
+        AdapterFragment adapterFragment = new AdapterFragment(this);
+        viewPager.setAdapter(adapterFragment);
 
-        listGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
 
-                //Intent intent = new Intent(getApplicationContext(), GamesDetail.class);
-                Intent intent = new Intent(MainActivity.this, GameDetail.class);
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
 
-                intent.putExtra("foto_jogo", adapter.listaFoto[position]);
-                //intent.putExtra("foto_jogo", lista.listaFoto[position]);
-                //intent.putExtra("foto_jogo", listaFoto[position]);
-                //intent.putExtra("foto_jogo", adapter.listaFoto[position]);
-                intent.putExtra("nome_jogo", adapter.listaNome[position]);
-                intent.putExtra("ano_jogo", lista.year[position]);
-                intent.putExtra("studio_jogo", lista.studio[position]);
+            }
 
-//              startActivity(new Intent(this, MainActivity.class));
-                MainActivity.this.startActivity(intent);
-                //startActivity(intent);
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 
-        add.setOnClickListener(new View.OnClickListener() {
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent (getApplicationContext(), GameAdd.class));
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                tabLayout.getTabAt(position).select();
             }
         });
+
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "menu", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navopen, R.string.navclose);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
     }
 
-//    @Override
-//    public void onBackPressed() {
-////        startActivity(new Intent(this, MainActivity.class));
-//        finish();
-//    }
-
-//    class GamesAdapter extends BaseAdapter {
-//
-//        @Override
-//        public int getCount() {
-//            return listaFoto.length;
-//        }
-//
-//        @Override
-//        public Object getItem(int position) {
-//            return null;
-//        }
-//
-//        @Override
-//        public long getItemId(int position) {
-//            return 0;
-//        }
-//
-//        @Override
-//        public View getView(int position, View convertView, ViewGroup parent) {
-//
-//            ImageView imageGame;
-//            TextView textGame;
-//
-////            View view = getLayoutInflater().inflate(R.layout.games_card_layout, null);
-//            View view = getLayoutInflater().inflate(R.layout.game_card_layout, parent, false);
-//
-//            imageGame = findViewById(R.id.ivGame);
-//            textGame = findViewById(R.id.tvGame);
-//
-//            imageGame.setImageResource(listaFoto[position]);
-//            textGame.setText(listaNome[position]);
-//
-//            return view;
-//        }
-//    }
 }
